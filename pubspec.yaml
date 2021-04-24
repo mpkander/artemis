@@ -1,5 +1,7 @@
 name: artemis
-version: 7.0.0-beta.5
+version: 7.0.0-beta.5-equality-fix
+
+publish_to: 'none'
 
 description: Build dart types from GraphQL schemas and queries (using Introspection Query).
 homepage: https://github.com/comigor/artemis
@@ -13,7 +15,6 @@ dependencies:
   build: ^2.0.1
   collection: ^1.15.0
   dart_style: ^2.0.0
-  equatable: ^2.0.0
   glob: ^2.0.1
   gql_code_builder: ^0.2.0-nullsafety.0
   gql_dedupe_link: ^2.0.0-nullsafety.1
@@ -28,6 +29,10 @@ dependencies:
   recase: ^4.0.0-nullsafety.0
   source_gen: ^1.0.0
   yaml: ^3.1.0
+  equatable:
+    git:
+      url: git@github.com:mpkander/equatable.git
+      ref: fix/non-nullable-other-equality-object
 
 dev_dependencies:
   args: ^2.0.0
